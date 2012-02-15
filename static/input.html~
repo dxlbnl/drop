@@ -1,0 +1,46 @@
+<!doctype=html >
+<meta charset=utf-8>
+
+
+<div id=keyboard>
+	<div class=row>
+		
+	</div>
+
+
+</div>
+
+
+<script type='text/javascript' src='library/mootools.js'></script>
+
+<script>
+
+
+var keyboard = [
+	[27, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 145, 19, 45, 46],
+	[192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187, 8, 36],
+	[9, 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221, 220, 33],
+	[20, 65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, 'enter', 34],
+	[16, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, 16, 35],
+	[17, 91, 18,   , 32 , 18, 17],
+];
+
+
+
+
+
+var codes = [];
+
+$(document).addEvent('keydown', function(e){
+	if (e.key !== "enter") {
+		codes.push(e.code);
+	} else {
+		console.log(codes);
+		codes = [];
+	}
+	e.stop();
+// 	if (e.keyCode==90 && e.ctrlKey)
+// 		$("body").append("<p>ctrl+z detected!</p>");
+});
+
+</script>
